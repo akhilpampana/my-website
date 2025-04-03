@@ -14,7 +14,6 @@ function App() {
     try {
       const response = await fetch('/api');
       if (!response.ok) {
-        // If the server responds with a status outside the 2xx range
         throw new Error(`Server error: ${response.statusText}`);
       }
       const result = await response.json();
@@ -34,28 +33,42 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <h1>React + Node.js Full-Stack App</h1>
+        <h1>Welcome to My Personal Website</h1>
 
+        {/* Personal Information Section */}
+        <section>
+          <h2>About Me</h2>
+          <p>Hi, I'm Akhil! I'm a software developer passionate about building web applications and exploring new technologies.</p>
+          <p>
+            Feel free to connect with me:
+            <ul>
+              <li>
+                <a href="https://github.com/your-github-username" target="_blank" rel="noopener noreferrer">
+                  GitHub
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/your-linkedin-username" target="_blank" rel="noopener noreferrer">
+                  LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="https://your-portfolio.com" target="_blank" rel="noopener noreferrer">
+                  Portfolio
+                </a>
+              </li>
+            </ul>
+          </p>
+        </section>
+
+        {/* Existing Functionality */}
         {loading && <p>Loading...</p>}
         {error && <p style={{ color: 'red' }}>Error: {error}</p>}
-
         {!loading && !error && <p>{data}</p>}
 
         <button onClick={fetchData} disabled={loading}>
           Refresh Data
         </button>
-
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
     </div>
   );
