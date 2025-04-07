@@ -57,13 +57,6 @@ function App() {
             </ul>
           </p>
         </section>
-
-        {/* <TestServer /> */}
-
-        {/*loading && <p>Loading...</p>*/}
-        {/*error && <p style={{ color: 'red' }}>Error: {error}</p>*/}
-        {/*!loading && !error && <p>{data}</p>*/}
-
         <button onClick={fetchData} disabled={loading}>
           Refresh Data
         </button>
