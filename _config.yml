@@ -1,11 +1,11 @@
-ignore:
+exclude:
   - ".sass-cache"
   - ".jekyll-cache"
   - "gemfiles"
   - "Gemfile"
   - "Gemfile.lock"
-  - "server/node_modules/**"
-  - "client/node_modules/**"
+  - "server/node_modules"
+  - "client/node_modules"
   - "vendor/bundle/"
   - "vendor/cache/"
   - "vendor/gems/"
