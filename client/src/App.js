@@ -2,24 +2,6 @@ import React, { useEffect, useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-function TestServer() {
-  const [message, setMessage] = useState('');
-
-  useEffect(() => {
-    fetch('/api/test')
-      .then(res => res.json())
-      .then(data => setMessage(data.message))
-      .catch(err => console.error('Error:', err));
-  }, []);
-
-  return (
-    <div>
-      <h2>Server Test</h2>
-      <p>{message}</p>
-    </div>
-  );
-}
-
 function App() {
   const [data, setData] = useState('');
   const [error, setError] = useState(null);
@@ -76,11 +58,11 @@ function App() {
           </p>
         </section>
 
-        <TestServer />
+        {/* <TestServer /> */}
 
-        {loading && <p>Loading...</p>}
-        {error && <p style={{ color: 'red' }}>Error: {error}</p>}
-        {!loading && !error && <p>{data}</p>}
+        {/*loading && <p>Loading...</p>*/}
+        {/*error && <p style={{ color: 'red' }}>Error: {error}</p>*/}
+        {/*!loading && !error && <p>{data}</p>*/}
 
         <button onClick={fetchData} disabled={loading}>
           Refresh Data
